@@ -5,6 +5,7 @@
 
 # Factures documents
 *.pdf
+document/*.pdf
 
 # Node artifact files
 node_modules/
