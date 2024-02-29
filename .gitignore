@@ -56,4 +56,4 @@ Thumbs.db
 *.vscode
 
 # conig file
-conf/conf.php
+conf.php
