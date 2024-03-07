@@ -127,7 +127,7 @@ class modDolideo extends DolibarrModules
 
 		// Data directories to create when module is enabled.
 		// Example: this->dirs = array("/dolideo/temp","/dolideo/subdir");
-		$this->dirs = array("/dolideo/temp");
+		$this->dirs = array("/dolideo/temp", "/dolideo/demandecelebration");
 
 		// Config pages. Put here list of php page, stored into dolideo/admin directory, to use to setup module.
 		$this->config_page_url = array("setup.php@dolideo");
@@ -203,7 +203,33 @@ class modDolideo extends DolibarrModules
 		// 'user'             to add a tab in user view
 
 		// Dictionaries
-		$this->dictionaries = array();
+		$this->dictionaries = array(
+			'langs'=>'dolideo@dolideo',
+			// List of tables we want to see into dictonnary editor
+			'tabname'=>array("dolideo_recurrence"
+							),
+			// Label of tables
+			'tablib'=>array("label"
+							),
+			// Request to select fields
+			'tabsql'=>array('SELECT f.rowid as rowid, f.label, f.status FROM '.MAIN_DB_PREFIX.'dolideo_recurrence as f'
+							),
+			// Sort order
+			'tabsqlsort'=>array("label ASC"),
+			// List of fields (result of select to show dictionary)
+			'tabfield'=>array("label,status"),
+			// List of fields (list of fields to edit a record)
+			'tabfieldvalue'=>array("label,responsable,status"),
+			// List of fields (list of fields for insert)
+			'tabfieldinsert'=>array("label,responsable,status"),
+			// Name of columns with primary key (try to always name it 'rowid')
+			'tabrowid'=>array("rowid"),
+			// Condition to show each dictionary
+			'tabcond'=>array(isModEnabled('dolideo')),
+			// Tooltip for every fields of dictionaries: DO NOT PUT AN EMPTY ARRAY
+			'tabhelp'=>array(array('label'=>$langs->trans('labelTooltipHelp'), 'status'=>$langs->trans('StatusTooltipHelp'))
+							)
+		);
 		/* Example:
 		$this->dictionaries=array(
 			'langs'=>'dolideo@dolideo',
@@ -233,11 +259,11 @@ class modDolideo extends DolibarrModules
 		// Boxes/Widgets
 		// Add here list of php file(s) stored in dolideo/core/boxes that contains a class to show a widget.
 		$this->boxes = array(
-			//  0 => array(
-			//      'file' => 'dolideowidget1.php@dolideo',
-			//      'note' => 'Widget provided by Dolideo',
-			//      'enabledbydefaulton' => 'Home',
-			//  ),
+			  0 => array(
+			      'file' => 'dolideowidget1.php@dolideo',
+			      'note' => 'Widget provided by Dolideo',
+			      'enabledbydefaulton' => 'Home',
+			  ),
 			//  ...
 		);
 
@@ -269,6 +295,21 @@ class modDolideo extends DolibarrModules
 		$r = 0;
 		// Add here entries to declare new permissions
 		/* BEGIN MODULEBUILDER PERMISSIONS */
+		$this->rights[$r][0] = $this->numero . sprintf('%02d', (0 * 10) + 0 + 1);
+		$this->rights[$r][1] = 'Read DemandeCelebration object of Dolideo';
+		$this->rights[$r][4] = 'demandecelebration';
+		$this->rights[$r][5] = 'read';
+		$r++;
+		$this->rights[$r][0] = $this->numero . sprintf('%02d', (0 * 10) + 1 + 1);
+		$this->rights[$r][1] = 'Create/Update DemandeCelebration object of Dolideo';
+		$this->rights[$r][4] = 'demandecelebration';
+		$this->rights[$r][5] = 'write';
+		$r++;
+		$this->rights[$r][0] = $this->numero . sprintf('%02d', (0 * 10) + 2 + 1);
+		$this->rights[$r][1] = 'Delete DemandeCelebration object of Dolideo';
+		$this->rights[$r][4] = 'demandecelebration';
+		$this->rights[$r][5] = 'delete';
+		$r++;
 		
 		/* END MODULEBUILDER PERMISSIONS */
 
@@ -296,6 +337,52 @@ class modDolideo extends DolibarrModules
 		/* BEGIN MODULEBUILDER LEFTMENU MYOBJECT */
 
 
+		/*LEFTMENU DEMANDECELEBRATION*/
+		$this->menu[$r++]=array(
+			'fk_menu'=>'fk_mainmenu=dolideo',
+			'type'=>'left',
+			'titre'=>'DemandeCelebration',
+			'prefix' => img_picto('', $this->picto, 'class="paddingright pictofixedwidth valignmiddle"'),
+			'mainmenu'=>'dolideo',
+			'leftmenu'=>'demandecelebration',
+			'url'=>'/dolideo/demandecelebration_list.php',
+			'langs'=>'dolideo@dolideo',
+			'position'=>1000+$r,
+			'enabled'=>'$conf->testmodule->enabled',
+			'perms'=>'1',
+			'target'=>'',
+			'user'=>2,
+		);
+        $this->menu[$r++]=array(
+            'fk_menu'=>'fk_mainmenu=dolideo,fk_leftmenu=demandecelebration',
+            'type'=>'left',
+            'titre'=>'List DemandeCelebration',
+            'mainmenu'=>'dolideo',
+            'leftmenu'=>'dolideo_demandecelebration_list',
+            'url'=>'/dolideo/demandecelebration_list.php',
+            'langs'=>'dolideo@dolideo',
+            'position'=>1000+$r,
+            'enabled'=>'$conf->dolideo->enabled',
+            'perms'=>'1',
+            'target'=>'',
+            'user'=>2,
+        );
+        $this->menu[$r++]=array(
+            'fk_menu'=>'fk_mainmenu=dolideo,fk_leftmenu=demandecelebration',
+            'type'=>'left',
+            'titre'=>'New DemandeCelebration',
+            'mainmenu'=>'dolideo',
+            'leftmenu'=>'dolideo_demandecelebration_new',
+            'url'=>'/dolideo/demandecelebration_card.php?action=create',
+            'langs'=>'dolideo@dolideo',
+            'position'=>1000+$r,
+            'enabled'=>'$conf->dolideo->enabled',
+            'perms'=>'1',
+            'target'=>'',
+            'user'=>2
+        );
+
+		/*END LEFTMENU DEMANDECELEBRATION*/
 		/* END MODULEBUILDER LEFTMENU MYOBJECT */
 		// Exports profiles provided by this module
 		$r = 1;
@@ -384,13 +471,14 @@ class modDolideo extends DolibarrModules
 		}
 
 		// Create extrafields during init
-		//include_once DOL_DOCUMENT_ROOT.'/core/class/extrafields.class.php';
+		include_once DOL_DOCUMENT_ROOT.'/core/class/extrafields.class.php';
 		//$extrafields = new ExtraFields($this->db);
 		//$result1=$extrafields->addExtraField('dolideo_myattr1', "New Attr 1 label", 'boolean', 1,  3, 'thirdparty',   0, 0, '', '', 1, '', 0, 0, '', '', 'dolideo@dolideo', 'isModEnabled("dolideo")');
 		//$result2=$extrafields->addExtraField('dolideo_myattr2', "New Attr 2 label", 'varchar', 1, 10, 'project',      0, 0, '', '', 1, '', 0, 0, '', '', 'dolideo@dolideo', 'isModEnabled("dolideo")');
 		//$result3=$extrafields->addExtraField('dolideo_myattr3', "New Attr 3 label", 'varchar', 1, 10, 'bank_account', 0, 0, '', '', 1, '', 0, 0, '', '', 'dolideo@dolideo', 'isModEnabled("dolideo")');
 		//$result4=$extrafields->addExtraField('dolideo_myattr4', "New Attr 4 label", 'select',  1,  3, 'thirdparty',   0, 1, '', array('options'=>array('code1'=>'Val1','code2'=>'Val2','code3'=>'Val3')), 1,'', 0, 0, '', '', 'dolideo@dolideo', 'isModEnabled("dolideo")');
 		//$result5=$extrafields->addExtraField('dolideo_myattr5', "New Attr 5 label", 'text',    1, 10, 'user',         0, 0, '', '', 1, '', 0, 0, '', '', 'dolideo@dolideo', 'isModEnabled("dolideo")');
+		$result1=$extrafields->addExtraField('numpiececsvh', "Numéro pièce comptable", 'varchar', 1, '15', 'accounting_bookkeeping', 0, 0, '', array('options' => array('' => null)), 1, '', '1', 0, '', '', 'dolideo@dolideo', 'isModEnabled("dolideo")', '', '1');
 
 		// Permissions
 		$this->remove($options);

@@ -1152,3 +1152,5 @@ INSERT INTO llx_accounting_account (entity, rowid, fk_pcg_version, pcg_type, acc
 INSERT INTO llx_accounting_account (entity, rowid, fk_pcg_version, pcg_type, account_number, account_parent, label, active) VALUES (__ENTITY__,16122,"SYCEBNL-BJ","ENGAGEMENTS HORS BILAN",910,16121,"Dons en nature",1);
 INSERT INTO llx_accounting_account (entity, rowid, fk_pcg_version, pcg_type, account_number, account_parent, label, active) VALUES (__ENTITY__,16123,"SYCEBNL-BJ","ENGAGEMENTS HORS BILAN",911,16121,"Prestations en nature",1);
 INSERT INTO llx_accounting_account (entity, rowid, fk_pcg_version, pcg_type, account_number, account_parent, label, active) VALUES (__ENTITY__,16124,"SYCEBNL-BJ","ENGAGEMENTS HORS BILAN",914,16121,"Bénévolat",1);
+
+-- insertion des produits et services

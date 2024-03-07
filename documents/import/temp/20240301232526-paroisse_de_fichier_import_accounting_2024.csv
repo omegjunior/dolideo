@@ -1,0 +1,89 @@
+Plan comptable* (aa.fk_pcg_version);Compte comptable* (aa.account_number);Libellé* (aa.label);Compte père (aa.account_parent);Groupe de comptes personnalisé (aa.fk_accounting_category);Groupe de comptes comptables* (aa.pcg_type);État* (aa.active);Date création (aa.datec)
+PCG99-ABREGE;707;Product sales;ref:7 or id:1407;;PROD;1;2017-04-28
+SYCEBNL-BJ;222111;Achat de terrain;15112;20;ACTIF IMMOBILISE;1;2024-02-28
+SYCEBNL-BJ;231701;Travaux préliminaires - Terrassements;15141;19;ACTIF IMMOBILISE;1;2024-02-27
+SYCEBNL-BJ;231702;Maçonnerie - Béton;15141;19;ACTIF IMMOBILISE;1;2024-02-27
+SYCEBNL-BJ;231703;Enduits - Revêtements;15141;19;ACTIF IMMOBILISE;1;2024-02-27
+SYCEBNL-BJ;231704;Menuiserie bois - Vitrerie - Métallique;15141;19;ACTIF IMMOBILISE;1;2024-02-27
+SYCEBNL-BJ;231705;Plomberie - Sanitaire;15141;19;ACTIF IMMOBILISE;1;2024-02-27
+SYCEBNL-BJ;231706;Electricité;15141;19;ACTIF IMMOBILISE;1;2024-02-27
+SYCEBNL-BJ;231707;Peinture;15141;19;ACTIF IMMOBILISE;1;2024-02-27
+SYCEBNL-BJ;231708;Dépenses de construction des stations;15141;19;ACTIF IMMOBILISE;1;2024-02-27
+SYCEBNL-BJ;231709;Autres;15141;19;ACTIF IMMOBILISE;1;2024-02-27
+SYCEBNL-BJ;244301;Achats (linges sacrés, livres liturgiques, vases sacrés…….etc);15188;10;ACTIF IMMOBILISE;1;2024-02-27
+SYCEBNL-BJ;244302;Achats (ornements et napes d'autel…….etc);15188;10;ACTIF IMMOBILISE;1;2024-02-27
+SYCEBNL-BJ;4712Q01; Epiphanie / Enfance missionnaire OPM;15553;3;TIERS;1;2024-02-27
+SYCEBNL-BJ;4712Q02;3è Dimanche temps ordinaire : Alliance biblique CEB;15553;3;TIERS;1;2024-02-27
+SYCEBNL-BJ;4712Q03; 1er dimanche carême: Maison Archevêque;15553;3;TIERS;1;2024-02-27
+SYCEBNL-BJ;4712Q04; Jeudi Saint: Séminaires  OPM;15553;3;TIERS;1;2024-02-27
+SYCEBNL-BJ;4712Q05; Vendredi Saint: Lieux Saints OPM;15553;3;TIERS;1;2024-02-27
+SYCEBNL-BJ;4712Q06; 4è dimanche de Pâques: Bon pasteur: St Pierre OPM + Vocations;15553;3;TIERS;1;2024-02-27
+SYCEBNL-BJ;4712Q07; Pentécote- Denier de St Pierre OPM;15553;3;TIERS;1;2024-02-27
+SYCEBNL-BJ;4712Q08; Ascension: CEB;15553;3;TIERS;1;2024-02-27
+SYCEBNL-BJ;4712Q09; 1er dimanche juillet CERAO;15553;3;TIERS;1;2024-02-27
+SYCEBNL-BJ;4712Q10; 1er dimanche d'Août (Grotte Mariale Dassa);15553;3;TIERS;1;2024-02-27
+SYCEBNL-BJ;4712Q11; Avant dernier dimanche d'Octobre OPM;15553;3;TIERS;1;2024-02-27
+SYCEBNL-BJ;4712Q12;" 1er dimanche de l'Avent; Caritas Nationale";15553;3;TIERS;1;2024-02-27
+SYCEBNL-BJ;4712Q13; 1er dimanche de Novembre: Obsèques des prêtres;15553;3;TIERS;1;2024-02-27
+SYCEBNL-BJ;4712Q14; Dimanche de la Sainte famille CEB;15553;3;TIERS;1;2024-02-27
+SYCEBNL-BJ;474701;10% 1ères Quêtes  et troncs;15553;3;TIERS;1;2024-02-27
+SYCEBNL-BJ;474702;20% des 2è quêtes ;15553;3;TIERS;1;2024-02-27
+SYCEBNL-BJ;474703;95% Denier de culte;15553;3;TIERS;1;2024-02-27
+SYCEBNL-BJ;474704;2è quêtes des funérailles;15553;3;TIERS;1;2024-02-27
+SYCEBNL-BJ;4747051;75% des Offrandes de messes + Taxe;15553;3;TIERS;1;2024-02-27
+SYCEBNL-BJ;4747052;Frais de déplacement payés aux confrères pour les messes;15553;10;TIERS;1;2024-02-27
+SYCEBNL-BJ;474706;10% des Autres revenus (vente de livrets, loyers boutiques, toilettes publiques…etc);15553;3;TIERS;1;2024-02-27
+SYCEBNL-BJ;601201;vin,hosties;15713;10;CHARGES;1;2024-02-27
+SYCEBNL-BJ;6041001; Alimentation (total des dépenses engagées);15713;5;CHARGES;1;2024-02-27
+SYCEBNL-BJ;6042001;Frais de cuisine (gaz, bois de chauffe, ustensils, couverts);15713;5;CHARGES;1;2024-02-27
+SYCEBNL-BJ;604301;Trousseau, blanchissage;15713;5;CHARGES;1;2024-02-27
+SYCEBNL-BJ;618101;Carburant et lubrifiant;15762;8;CHARGES;1;2024-02-27
+SYCEBNL-BJ;618102;Voyages et autres déplacements;15762;8;CHARGES;1;2024-02-27
+SYCEBNL-BJ;622301;Locations de matériels;15771;9;CHARGES;1;2024-02-27
+SYCEBNL-BJ;624201;Entretien et réparation presbytère;15771;5;CHARGES;1;2024-02-27
+SYCEBNL-BJ;624202;Entretien et réparation secretariat;15771;7;CHARGES;1;2024-02-27
+SYCEBNL-BJ;624203;Entretien et réparation moyen d'evengelisation;15771;9;CHARGES;1;2024-02-27
+SYCEBNL-BJ;624801;Autres entretiens et réparation vehicule;15771;8;CHARGES;1;2024-02-27
+SYCEBNL-BJ;626601;Documentation (Eglise de cotonou, La Croix…..etc);15771;5;CHARGES;1;2024-02-27
+SYCEBNL-BJ;635101;Livre Liturgique en Fongbé;15814;10;CHARGES;1;2024-02-27
+SYCEBNL-BJ;635102;Livre PSAP2 ;15814;14;CHARGES;1;2024-02-27
+SYCEBNL-BJ;635103;Bâche PSAP2 ;15814;14;CHARGES;1;2024-02-27
+SYCEBNL-BJ;635104;Participation pélérinage diocésain ;15814;14;CHARGES;1;2024-02-27
+SYCEBNL-BJ;636301;Dépenses extraordinaires (rencontres et fêtes…);15814;11;CHARGES;1;2024-02-27
+SYCEBNL-BJ;637101;Rémunération des catéchistes;15814;13;CHARGES;1;2024-02-27
+SYCEBNL-BJ;6388011;Autres dépenses du presbytère;15814;5;CHARGES;1;2024-02-27
+SYCEBNL-BJ;638802;Sessions, prédication;15814;9;CHARGES;1;2024-02-27
+SYCEBNL-BJ;6388012;Dépenses pour la catéchèse;15814;9;CHARGES;1;2024-02-27
+SYCEBNL-BJ;641101;Impôts fonciers;15850;12;CHARGES;1;2024-02-27
+SYCEBNL-BJ;641301;Impôts sur salaires;15850;12;CHARGES;1;2024-02-27
+SYCEBNL-BJ;641801;Impôt sur loyers;15850;12;CHARGES;1;2024-02-27
+SYCEBNL-BJ;641802;Autres types d'impôts;15850;12;CHARGES;1;2024-02-27
+SYCEBNL-BJ;651501;Autres dépenses pour le culte;15873;10;CHARGES;1;2024-02-27
+SYCEBNL-BJ;654501;Aides aux séminaristes;15873;11;CHARGES;1;2024-02-27
+SYCEBNL-BJ;654502;Aides aux prêtres de la paroisse (Curé, Vicaires, Résidents);15873;11;CHARGES;1;2024-02-27
+SYCEBNL-BJ;654503;Dons faits par la paroisse;15873;11;CHARGES;1;2024-02-27
+SYCEBNL-BJ;661101;Allocations versées aux prêtres;15889;13;CHARGES;1;2024-02-27
+SYCEBNL-BJ;661102;Salaires personnel domestique (cuisinier, gardien, blanchisseur, agent d'entretien);15889;13;CHARGES;1;2024-02-27
+SYCEBNL-BJ;661103;Salaires personnel Administratif (secrétaire, comptable, caissier, sacristie);15889;13;CHARGES;1;2024-02-27
+SYCEBNL-BJ;701001;Cotisation des stations pour les investissements;15974;16;PRODUITS;1;2024-02-27
+SYCEBNL-BJ;704101;Dons reçus pour le fonctionnement;15974;2;PRODUITS;1;2024-02-27
+SYCEBNL-BJ;704401;90% 1ères Quêtes  et troncs;15974;2;PRODUITS;1;2024-02-27
+SYCEBNL-BJ;704402;80% des 2è quêtes ;15974;2;PRODUITS;1;2024-02-27
+SYCEBNL-BJ;704403;5% Denier de culte;15974;2;PRODUITS;1;2024-02-27
+SYCEBNL-BJ;704404;25% des Offrandes de messes;15974;2;PRODUITS;1;2024-02-27
+SYCEBNL-BJ;704405;90% des Autres revenus (vente de livrets, loyers boutiques, toilettes publiques…etc);15974;2;PRODUITS;1;2024-02-27
+SYCEBNL-BJ;704406;Dîmes;15974;2;PRODUITS;1;2024-02-27
+SYCEBNL-BJ;704801;Collecte des matériaux de constructions;15974;16;PRODUITS;1;2024-02-27
+SYCEBNL-BJ;705201;Recettes de la catéchèse;15974;2;PRODUITS;1;2024-02-27
+SYCEBNL-BJ;706001;Quêtes extraordinaires (pour les investissements);15974;16;PRODUITS;1;2024-02-27
+SYCEBNL-BJ;706002; Dons reçus pour les investissements;15974;16;PRODUITS;1;2024-02-27
+SYCEBNL-BJ;706003;Ventes de charité / Zindo pour la paroisse;15974;16;PRODUITS;1;2024-02-27
+SYCEBNL-BJ;713001;Financement reçu de l'Archevêché;15998;17;PRODUITS;1;2024-02-27
+SYCEBNL-BJ;713002;Financement des OPM;15998;17;PRODUITS;1;2024-02-27
+SYCEBNL-BJ;713003;Financement reçu d'autres organismes;15998;17;PRODUITS;1;2024-02-27
+SYCEBNL-BJ;713004;Financement reçu d'autres diocèses;15998;17;PRODUITS;1;2024-02-27
+SYCEBNL-BJ;713005; Autres financements;15998;17;PRODUITS;1;2024-02-27
+SYCEBNL-BJ;718001;Alimentation reçue de l'Economat;15998;2;PRODUITS;1;2024-02-27
+SYCEBNL-BJ;718002;Subsides de la caisse de péréquation;15998;2;PRODUITS;1;2024-02-27
+SYCEBNL-BJ;718003;Subsides pour rémunérations des catéchistes;15998;2;PRODUITS;1;2024-02-27
+SYCEBNL-BJ;718004;Appui pour le salaire du cuisinier;15998;2;PRODUITS;1;2024-02-27

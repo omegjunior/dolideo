@@ -17,34 +17,34 @@
 # Generic
 #
 
-# Module label 'ModuleMyModuleName'
+# Module label 'ModuleDolideoName'
 ModuleDolideoName = Paroisse
-# Module description 'ModuleMyModuleDesc'
+# Module description 'ModuleDolideoDesc'
 ModuleDolideoDesc = Module de gestion paroissiale
 
 #
 # Admin page
 #
-MyModuleSetup = MyModule setup
+DolideoSetup = Dolideo setup
 Settings = Settings
-MyModuleSetupPage = MyModule setup page
-MYMODULE_MYPARAM1 = My param 1
-MYMODULE_MYPARAM1Tooltip = My param 1 tooltip
-MYMODULE_MYPARAM2=My param 2
-MYMODULE_MYPARAM2Tooltip=My param 2 tooltip
+DolideoSetupPage = Dolideo setup page
+Dolideo_MYPARAM1 = My param 1
+Dolideo_MYPARAM1Tooltip = My param 1 tooltip
+Dolideo_MYPARAM2=My param 2
+Dolideo_MYPARAM2Tooltip=My param 2 tooltip
 
 
 #
 # About page
 #
 About = About
-MyModuleAbout = About MyModule
-MyModuleAboutPage = MyModule about page
+DolideoAbout = About Dolideo
+DolideoAboutPage = Dolideo about page
 DolideoAbout = Pour la gestion des paroisses en conformité avec le SYCEBNL
 #
 # Sample page
 #
-MyModuleArea = Home MyModule
+DolideoArea = Home Dolideo
 MyPageName = My page name
 
 #
@@ -52,3 +52,18 @@ MyPageName = My page name
 #
 MyWidget = My widget
 MyWidgetDescription = My widget description
+
+#objet demande de célébration
+recurrence = récurrence
+type = Type de célébration demandé
+
+#dictionnaire
+StatusTooltipHelp = Etat de la recurrence -- 1 si ce type de récurrence est utilisé et 0 sinon
+LabelTooltipHelp = Type de récurrence pris en compte
+DemandeCelebration = Demande de célébration
+List_DemandeCelebration = Liste des demandes
+New_DemandeCelebration = Nouvelle demande
+DolideoArea = 	Espace demande de célébrations
+DemandeCelebrations = Liste des demandes de célébrations
+NewObject_Demande = Nouvelle demande
+labelTooltipHelp = Neuvaine, trentain, etc...
